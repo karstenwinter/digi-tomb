@@ -1,28 +1,33 @@
 import React from 'react';
 import {Typography} from "@material-ui/core";
-import SelectInput from "@material-ui/core/Select/SelectInput";
-import Input from "@material-ui/core/Input";
+import TextField from "@material-ui/core/TextField";
+import Select from "@material-ui/core/Select";
 
 export function StartPage() {
   return <div>
 
-    <Typography>Tombstone, der digitale Friedhof</Typography>
-
-    <Input type="text">
-      👤 Nach Namen suchen [🔎]
-    </Input>
-    <br/>
-    oder
-
-    <Input type="text">
-      🗺️ Ort suchen [🔎]
-    </Input>
-
+    <Typography variant="h3">
+      Tombstone, der digitale Friedhof
+    </Typography>
 
     <br/>
+    <TextField placeholder="👤 Nach Namen suchen 🔎">
+    </TextField>
 
-    <SelectInput>
+    <br/>
+    <Typography variant="caption">
+      oder
+    </Typography>
+
+    <br/>
+
+    <TextField placeholder="🗺️ Ort suchen 🔎">
+    </TextField>
+
+    <br/>
+
+    <Select autoWidth native={false} multiple={false}>
       <option>DE</option>
-    </SelectInput>
+    </Select>
   </div>
 }
